@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
+import { joinURL } from 'ufo'
 
 useHead({
   htmlAttrs: {
@@ -28,43 +29,46 @@ onMounted(() => {
   }
 });
 
+const runtimeConfig = useRuntimeConfig();
+const withBase = (path: string) => joinURL(runtimeConfig.app.baseURL || '/', path);
+
 const testimonials = [
-  '/assets/images/testimoni-1.webp',
-  '/assets/images/testimoni-2.webp',
-  '/assets/images/testimoni-3.webp',
-  '/assets/images/testimoni-4.webp',
-  '/assets/images/testimoni-5.webp',
-  '/assets/images/testimoni-6.webp',
-  '/assets/images/testimoni-7.webp',
-  '/assets/images/testimoni-8.webp',
-  '/assets/images/testimoni-9.webp',
-  '/assets/images/testimoni-10.webp',
+  withBase('assets/images/testimoni-1.webp'),
+  withBase('assets/images/testimoni-2.webp'),
+  withBase('assets/images/testimoni-3.webp'),
+  withBase('assets/images/testimoni-4.webp'),
+  withBase('assets/images/testimoni-5.webp'),
+  withBase('assets/images/testimoni-6.webp'),
+  withBase('assets/images/testimoni-7.webp'),
+  withBase('assets/images/testimoni-8.webp'),
+  withBase('assets/images/testimoni-9.webp'),
+  withBase('assets/images/testimoni-10.webp'),
 ]
 
 const partners = [
   {
     name: 'Rita Pasaraya',
-    image: '/assets/images/rita-partner.png',
+    image: withBase('assets/images/rita-partner.png'),
   },
   {
     name: 'Queen Bakery',
-    image: '/assets/images/queen-partner.webp',
+    image: withBase('assets/images/queen-partner.webp'),
   },
   {
     name: 'Jadi Baru Toserba',
-    image: '/assets/images/jadi-baru-partner.webp',
+    image: withBase('assets/images/jadi-baru-partner.webp'),
   },
   {
     name: 'Hanna Meatshop',
-    image: '/assets/images/hanna-meatshop-partner.webp',
+    image: withBase('assets/images/hanna-meatshop-partner.webp'),
   },
   {
     name: 'Eka Surya Plaza',
-    image: '/assets/images/eka-surya-partner.webp',
+    image: withBase('assets/images/eka-surya-partner.webp'),
   },
   {
     name: 'Cherry Fresh Fruit Market',
-    image: '/assets/images/cherry-fresh-fruit-partner.webp',
+    image: withBase('assets/images/cherry-fresh-fruit-partner.webp'),
   },
 ]
 
@@ -72,19 +76,19 @@ const products = [
   {
     title: 'Sambal Tuna Homemade — Pedas Gurih yang Nagih',
     description: 'Filet tuna segar dimasak perlahan dengan bumbu rempah pilihan. Tekstur lembut, rasa gurih, dan pedas pas untuk segala menu.',
-    image: '/assets/images/sambal-tuna-product.webp',
+    image: withBase('assets/images/sambal-tuna-product.webp'),
     alt: 'sambal tuna',
   },
   {
     title: 'Sambal Bawang Homemade — Pedas Rawit yang Harum',
     description: 'Cabai rawit dan bawang segar ditumis dengan minyak berkualitas hingga wangi. Pedasnya berani dengan aroma bawang yang menggoda selera.',
-    image: '/assets/images/sambal-bawang-product.webp',
+    image: withBase('assets/images/sambal-bawang-product.webp'),
     alt: 'sambal bawang',
   },
   {
     title: 'Sambal Cumi Cabe Ijo Homemade — Pedas Asin yang Kaya',
     description: 'Cumi segar dipadukan dengan cabe hijau dan rempah rahasia keluarga. Rasanya kaya, sedikit smoky, dan bikin nasi hangat cepat habis.',
-    image: '/assets/images/sambal-cumi-product.webp',
+    image: withBase('assets/images/sambal-cumi-product.webp'),
     alt: 'sambal cumi',
   },
 ]
@@ -123,11 +127,11 @@ const partnerOptions = {
   <main>
     <section class="relative h-screen min-h-[640px] snap-always snap-start">
       <div class="absolute inset-0 z-10">
-        <img src="/assets/images/hero-sambal.webp" alt="sambal tuna, sambal bawang, sambal cumi" class="object-cover w-full h-full">
+        <img :src="withBase('assets/images/hero-sambal.webp')" alt="sambal tuna, sambal bawang, sambal cumi" class="object-cover w-full h-full">
         <div class="absolute inset-0 bg-black/60 sm:bg-black/50 lg:bg-black/40 xl:bg-transparent"></div>
       </div>
       <div class="container absolute z-30 flex justify-center w-full px-6 -translate-x-1/2 top-8 sm:top-10 left-1/2">
-        <img src="/assets/images/dis-logo.webp" alt="dapur ibu sundari logo" width="150" height="150" class="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-[150px]">
+        <img :src="withBase('assets/images/dis-logo.webp')" alt="dapur ibu sundari logo" width="150" height="150" class="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-[150px]">
       </div>
       <div class="container absolute z-30 w-full px-6 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
         <div class="flex flex-col items-center justify-center text-center">
