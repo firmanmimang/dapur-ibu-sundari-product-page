@@ -13,7 +13,7 @@
     "@nuxtjs/robots": "^4.1.11",
     "@nuxtjs/sitemap": "^6.1.5",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "nuxt": "^3.14.159",
+    "nuxt": "^4.4.2",
     "nuxt-aos": "^1.2.5",
     "nuxt-swiper": "^1.2.2",
     "vue": "latest",
