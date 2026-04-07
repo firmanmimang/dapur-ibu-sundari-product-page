@@ -2,8 +2,6 @@
   <footer class="w-full border-t border-[#e1bfba]/30 bg-[#f5edde] pb-8 pt-16">
     <div
       class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 text-sm leading-relaxed text-[#422820] md:grid-cols-4 lg:px-8"
-      data-aos="fade-up"
-      data-aos-duration="800"
     >
       <div>
         <div class="mb-6 text-xl font-bold text-[#650003]" style="font-family: 'Noto Serif', serif;">
@@ -51,8 +49,6 @@
 
     <div
       class="mx-auto mt-16 max-w-7xl border-t border-[#e1bfba]/20 px-6 pt-8 text-center text-xs opacity-60 lg:px-8"
-      data-aos="fade-in"
-      data-aos-duration="700"
     >
       © 2024 Dapur Ibu Sundari. Diracik dengan warisan rasa.
     </div>
